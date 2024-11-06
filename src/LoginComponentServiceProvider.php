@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Avalon\LrvLogin\Observers\UserObserver;
 use App\Models\User;
 
-class LoginComponentServiceProvider extends ServiceProvider
+class LoginComponentServiceProvider extends BaseServiceProvider
 {
     public function register()
     {
