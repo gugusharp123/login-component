@@ -17,7 +17,7 @@
                             @csrf
                             @foreach (config('custom_login.fields') as $field => $details)
                                 <div class="form-group mb-3">
-                                    <label for="{{ $field }}" class="form-label">{{$details['label']}}</label>
+                                    <label for="{{ $field }}" class="form-label">{{ __($details['label']) }}</label>
                                     <input 
                                         type="{{ $details['type'] === 'string' ? 'text' : $details['type'] }}" 
                                         name="{{ $field }}" 
