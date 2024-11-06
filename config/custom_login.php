@@ -2,10 +2,9 @@
 
 return [
     'fields' => [
-        'id' => ['type' => 'bigInteger', 'length' => 20, 'required' => true],
-        'name' => ['type' => 'string', 'length' => 191, 'required' => true],
-        'email' => ['type' => 'string', 'length' => 191, 'required' => true],
-        'password' => ['type' => 'string', 'length' => 191, 'required' => true],
+        'name' => ['type' => 'string', 'length' => 191, 'required' => true, 'label'=>"lbl_name"],
+        'email' => ['type' => 'string', 'length' => 191, 'required' => true, 'label'=>"lbl_email"],
+        'password' => ['type' => 'string', 'length' => 191, 'required' => true, 'label'=>"lbl_password"],
     ],
 
     'allow_emails' => true,
