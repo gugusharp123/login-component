@@ -1,0 +1,27 @@
+{
+    "name": "avalon/lrv_login",
+    "type": "package",
+    "license": "MIT",
+    "description": "A Laravel login package with email integration",
+    "autoload": {
+        "psr-4": {
+            "Avalon\\LrvLogin\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "rampal",
+            "email": "rampal@avaloninfosys.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Avalon\\LrvLogin\\LoginComponentServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        
+    }
+}
