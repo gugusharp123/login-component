@@ -39,15 +39,15 @@ class LoginComponentServiceProvider extends BaseServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'lrv_login');
 
         // Check if the migration already exists
-        $existingMigrationPath = database_path('migrations/0001_01_01_000000_create_users_table.php');
-        if (file_exists($existingMigrationPath)) {
-            // Delete it before publishing package migration
-            unlink($existingMigrationPath); // This will delete the existing migration file
-        }
+        $existingMigrationPath = database_path('migrations');
+        // if (file_exists($existingMigrationPath)) {
+        //     // Delete it before publishing package migration
+        //     unlink($existingMigrationPath); // This will delete the existing migration file
+        // }
         // Publish the migration from your package to the application's migration directory
         $this->publishes([
-            __DIR__.'/database/migrations/0001_01_01_000000_create_users_table.php' => $existingMigrationPath,
+            __DIR__.'/database/migrations/2024_11_06_102733_create_users_table.php' => $existingMigrationPath,
         ], 'migrations');
-        copy(__DIR__ . '/../database/migrations/0001_01_01_000000_create_users_table.php', $existingMigrationPath);
+        copy(__DIR__ . '/../database/migrations/2024_11_06_102733_create_users_table.php', $existingMigrationPath);
     }
 }
